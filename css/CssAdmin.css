@@ -1,0 +1,602 @@
+/*----------------------------------+
+ |	Design & Develope By			|
+ |	Shahbaz Ahmed Bhatti			|
+ |	shahbazahmedbhattii@gmail.com	|
+ +---------------------------------*/
+@charset "utf-8";
+
+
+body{
+	background: url(../images/download.png) left top repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #333333;
+	/*margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;*/
+	}
+
+/*----------------------+
+ |	Admin Main Wrapp	|
+ +---------------------*/
+#wrappBody{
+	width:1300px;
+ 	margin:0 auto;
+	height: auto;
+	/*margin: 20px 50px 20px 50px;*/
+/*border: 1px solid #aaaaaa;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+box-shadow: 1px 1px 9px #dfdfdf;*/
+	}
+	#wrappMidBody{
+	 width:1300px;
+ margin:0 auto;
+	height: auto;
+	/*margin: 20px 50px 20px 50px;*/
+border:1px #fdcb10 solid;
+		/*border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+box-shadow: 1px 1px 9px #dfdfdf;*/
+	}
+
+/*----------------------+
+ |	Header Logo & User	|
+ +---------------------*/
+#wrappHeader{
+	width: auto;
+	height: 67px;
+	margin: 7px 0 19px 10px;
+	}
+	#adminLogo{
+		width: 156px;
+		height: 55px;
+		margin: 7px 0 0 10px;
+		padding: 9px;
+		box-shadow: 1px 1px 9px #dfdfdf;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		float: left;
+		}
+ 	#adminUser{
+	background: #f4f4f4;
+	width: 230px;
+	height: 40px;
+	float: right;
+	border: 1px solid #aaaaaa;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin-top: 9px;
+	margin-right: 20px;
+	margin-bottom: 0;
+	margin-left: 0;
+	padding-top: 9px;
+	padding-right: 0;
+	padding-bottom: 9px;
+	padding-left: 9px;
+		}
+	#usericon{
+		width: 39px;
+		height: 33px;
+		margin: 0 5px 0 0;
+		float: left;
+		}
+	#userinformation{
+		font-family: Arial, Helvetica, sans-serif;
+		/*padding:0 20px 0 20px;*/
+		color:#990000;
+		width: 155px;
+		height: 49px;
+		float: left;
+		font-size:10px;
+		}
+ 	a.userprofile{
+		font-size: 10px;
+		background: #FFFFFF;
+		display: block;
+		margin: 4px 7px 0 0;
+		padding: 3px 7px;
+		text-decoration: none;
+		border: 1px solid #cccccc;
+		float: left;
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		}
+	a:hover.userprofile{
+		background:  #f2f2f2;
+		}	
+ 
+/*----------------------+
+ | Main Navig & Menu Tab|
+ +---------------------*/
+#wrappnavigMain{
+	/*background: #eaeaea;*/
+	width: auto;
+	height: 119px;
+	margin: 1px 20px 17px 1px;
+	/*padding:9px 20px 17px 20px;*/
+	/*border: 1px solid #bbbbbb;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;*/
+/*	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;*/
+	}
+	
+#navcontainer{
+	background:#0C0;
+	width: auto;
+	height: 34px;
+	margin: 0 px;
+	padding:0;
+	border-bottom: 1px solid #bbbbbb;
+	float: left;
+	}
+.menu{
+	border: none;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	}
+	.menu ul{
+		height: 34px;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		}	
+	.menu li{
+			border-right: 1px solid #dcdbda;
+			float: left;
+			padding: 0px;
+			}
+	.menu li a{
+		/*color: #301E29;*/
+		color: #FFFFFF;
+		display: block;
+		font-weight: normal;
+		line-height: 34px;
+		margin: 0;
+		padding: 0px 17px 0 17px;
+		text-align: left;
+		text-decoration: none;
+		}
+		.menu li a:hover, .menu ul li:hover a{	/* Main menu Rollover */
+			background: #f6f6f6;			
+			color: #333333;
+			text-decoration: none;
+			}
+	.menu li ul{
+		background:  #eeeeee;
+		display: none;
+		height: auto;
+		padding: 0;
+		margin: 0;
+		border: 0px;
+		position: absolute;
+		width: 159px;
+		z-index: 200;
+		}
+	.menu li:hover ul{
+		display: block;		
+		}
+	.menu li li {
+		display: block;
+		float: none;
+		margin: 0px;
+		padding: 0px;
+		width: 159px;
+		}
+	.menu li:hover li a{
+		background: none;		
+		}
+	.menu li ul a{
+		border: 1px solid #cccccc;
+		border-top: none;
+		border-right: none;
+		display:block;	/*if u want increase navig height just increase height and block under line */
+		line-height: 19px;
+		height: 19px;
+		font-size: 12px;
+		font-style: normal;
+		margin: 0px;
+		padding: 7px;
+		text-align: left;
+		}
+		.menu li ul a:hover, .menu li ul li:hover a{
+			background: #f6f6f6;
+			color: #333333;
+			text-decoration: none;
+			}
+
+#navigMenuContainer{
+	width: auto;
+	height: 69px;
+	margin: 5px 5px 5px 5px;
+	}
+.imgbutton img{
+	border: none;
+	height: 32px;
+	margin: 3px 0 5px 0;	
+	}
+.imgbutton ul{
+    margin: 0;
+	padding: 0;
+    float: left;
+	} 
+.imgbutton ul li{
+    display: inline;
+	} 
+.imgbutton ul li a{
+	border: 1px solid #e9e9e9;
+	width: 73px;
+	height: 57px;
+	font-size: 12px;
+	text-align: center;
+	color: #666;
+	text-decoration: none;
+	display: block;
+	padding: 5px;
+	margin:0 9px 0 0;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	-webkit-transition: all 0.3s ease-out;	
+	float:left;
+	} 
+.imgbutton ul li a:hover, .imgbutton ul li .current{
+	background: #dfdfdf url(../images/icons/hover.jpg) left top repeat-x;
+	border: 1px solid #cccccc;
+	
+	}
+
+ 
+ 
+/*----------------------+
+ | Body Main Content	|
+ +---------------------*/
+#wrappBodyContent{
+	background: #f2f2f2;
+	width: auto;
+	height: auto;
+	padding: 0 0 9px 0;
+	border: 1px solid #bbbbbb;
+	}
+	#containerContent{
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		border: 1px dashed #0C0;
+		min-height:50px;
+		width: auto;
+		height: auto;
+		margin: 10px 10px 10px 10px;
+		padding: 10px 20px 10px 40px;
+		}
+	.contentTitle{
+		background: #e6e6e6;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		font-weight: bold;
+		display: block;
+		padding: 7px 0 9px 13px;
+		border-bottom: 1px solid #bbbbbb;
+		}
+	#contentSearch{
+		background: #f4f4f4;
+		width: auto;
+		height: auto;
+		margin: 0 0 9px 0;
+		padding: 5px 0;
+		border-bottom: 1px solid #bbbbbb;
+		}
+	#containerSearch{
+		width: 399px;
+		height: 29px;
+		float: left;
+		}
+	#searchfield{
+		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+		background: #f2f2f2;
+		color: #333333;
+		width: 249px;
+		margin: 0 9px 0 13px;
+		padding: 5px 9px;
+		border: none;
+		outline: none;
+		float: left;
+		border: 1px solid #dbdbdb;
+		}
+	.searchBtn{
+		background: #f0f0f0 url(../images/butonBG.jpg) left top repeat-x;
+		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+		background: #fefefe;
+		color: #000000;
+		margin: 0 9px 0 0;
+		padding: 5px 7px;
+		cursor: pointer;
+		float: left;
+		border: 1px solid #cccccc;
+		}
+	.searchBtn:hover{
+		background: url(../images/butonhover.jpg) left top repeat-x;
+		color: #FFFFFF;
+		border: 1px solid #444444;
+		}
+	#contentAdd{
+		background: url(../images/butonBG.jpg) left top repeat-x;
+		display: block;
+		float: right;
+		line-height: 19px;
+		margin: 0 13px 0 0;
+		padding: 4px 9px;
+		border: 1px solid #cccccc;
+		}
+ 	#contentAdd:hover{
+		background: #444444 url(../images/butonhover.jpg) left top repeat-x;
+		color: #FFFFFF;
+		}
+	#contentAdd a:hover{
+		color: #FFFFFF;
+		}
+#recordquesTR{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background: #fffdfa url(../images/record_headBG.gif) left top repeat-x;
+	font-size: 12px;
+	font-weight: bold;
+	width: auto;
+	height: 39px;
+	padding: 7px 5px 5px 5px;
+	border: 1px solid #d2d1cb;
+	}
+#recordquesTR th{
+	padding: 7px 5px 5px 5px;
+	border: 1px solid #d2d1cb;
+}
+	.borderRight{
+		border-right: 1px solid #bbbbbb;
+			}
+	.r1checkBox{
+		width: 29px;
+		height: 19px;
+		float: left;
+		}
+	.r2Name{
+		width: 149px;
+		line-height: 19px;
+		margin: 0 9px;
+		float: left;
+		}
+	.r3debiter{
+		width: 149px;
+		line-height: 19px;
+		margin: 0 9px 0 7px;
+		float: left;
+		}
+	.r4kvk{
+		width: 119px;
+		line-height: 19px;
+		margin: 0 7px 0 7px;
+		float: left;
+		}
+	.r5Btw{
+		width: 119px;
+		line-height: 19px;
+		margin: 0 7px 0 7px;
+		float: left;
+		}
+	.r6TelPhone{
+		width: 119px;
+		line-height: 19px;
+		margin: 0 9px 0 0;
+		float: left;
+		}
+	.r7Fax{
+		width: 119px;
+		line-height: 19px;
+		margin: 0 9px 0 0;
+		float: left;
+		}
+	.r0Action{
+		width: 79px;
+		float: right;
+		}
+	
+#recordcontainer{
+	background: #FFFFFF;
+	width: auto;
+	height: auto;
+	padding:0;
+	}
+.table {}
+.table td{
+	background: #fbfcfc;
+	border: solid 1px #e0e0e0;
+	padding: 9px 5px 5px 5px;
+	}
+.table tr.odd td{
+	background: #f8f8f8;
+	}
+.table tr:hover td{
+	background: #fff9e1;
+	/*background:#F3D8AF;*/
+	}
+.select{
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: #f2f2f2;
+	color: #333333;
+	width: 129px;
+	padding: 5px 9px;
+	border: none;
+	outline: none;
+	float: left;
+	border: 1px solid #dbdbdb;
+	}
+
+form{
+	margin: 0;
+	padding: 0;
+	}
+#containerForm{
+	background: #fbfcfc;
+	width: auto;
+	height: 799px;
+	margin: 0 auto;
+	border: 1px solid #bbbbbb;
+	}
+	.formheading{
+		background: #eaeaea;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		font-weight: bold;
+		display: block;
+		line-height: 19px;
+		margin: 0 0 9px 0;
+		padding: 7px 9px;
+		letter-spacing: 1px;
+		border-bottom: 1px solid #dddddd;
+		}
+	.formques{
+		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+		font-size: 13px;
+		width: 169px;
+		height: 19px;
+		margin: 0 0 0 9px;
+		float: left;
+		}
+	.formValue{
+		width: 299px;
+		color: #990000;
+		line-height: 19px;
+		height: auto;
+		margin: 0 7px 5px 0;
+		float: left;
+		}
+	input[type="text"],
+	input[type="password"]{
+		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+		background: #ffffff;
+		width: 279px;
+		padding: 3px 7px;
+		border: 1px solid #bbbbbb;
+		outline: none;
+		}
+	input:focus{
+		background-color: #fff;
+		border: 1px solid #cccccc;
+		box-shadow: 1px 1px 8px #dbdbdb;
+	}
+	.selectbox{
+		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+		background: #ffffff;
+		width: 289px;
+		padding: 3px 7px;
+		border: 1px solid #bbbbbb;
+		outline: none;
+		}
+	.textAddress{
+		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+		background: #ffffff;
+		width: 279px;
+		height: 59px;
+		padding: 3px 7px;
+		border: 1px solid #bbbbbb;
+		outline: none;
+		}
+	.inputdatebirth{
+		background: #666666;
+		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+		background: #ffffff;
+		width: 49px;
+		padding: 3px 7px;
+		border: 1px solid #bbbbbb;
+		outline: none;
+		}
+
+
+/*----------------------+
+ | Footer Powered By 	|
+ +---------------------*/
+#wrappFooter{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	width: 979px;
+	height: 19px;
+	margin: 17px auto 0 auto;
+	}
+ 	span#powerby{
+		display: block;
+		float: right;
+		}
+		
+ 
+ 
+/*----------------------+
+ | Admin Class & Styles |
+ +---------------------*/
+/*.a{
+	text-decoration: none;
+	}*/
+.clear{
+	clear: both;
+	}
+form{
+	margin: 0;
+	padding: 0;
+	}
+
+.box{
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-box-shadow: 0 0 6px #cccccc;
+	-webkit-box-shadow: 0 0 6px #cccccc;	/*	978f6c	*/
+	}
+	
+
+.boxhead{
+	-moz-border-radius-topleft:5px;
+	-moz-border-radius-topright:5px;
+	-webkit-border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	}
+	
+.roundAll{
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	}
+/*CV-Menu CSS*/
+#cv-menu{
+ width:930px;
+ padding-left:10px;
+ margin:0;
+ list-style:none;
+ float:left;
+}
+#cv-menu li{
+ float:left;
+ margin:0 5px 0 0;
+}
+#cv-menu li a{
+ color:#000;
+ text-decoration:none;
+ font-weight:bold;
+ font-size:11px;
+}
+#cv-menu li a:hover{
+ color: #fdcb10;
+ text-decoration:none;
+}
+#cv-menu li a.sel{
+ color:#f27012;
+ text-decoration:none;
+ font-size:11px;
+ font-weight:bold;
+}
+.star
+{
+color:#FF0000;}

@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-image:url(../images/indexuu.jpg);
+	margin:0;
+	padding:0;
+}
+/*th
+{ 
+background-color:#00CCCC;
+font-size:10px; 
+font-family:Arial, Helvetica, sans-serif; 
+padding:5px;
+}
+
+td
+{ 
+font-size:10px; 
+font-family:Arial, Helvetica, sans-serif; 
+
+
+}*/
+
+#select
+{ 
+width:98%;  
+position:relative;
+height:290px;
+margin:auto;
+}
+
+#canal1
+{ 
+position:relative; 
+float:left; 
+
+}
+
+#canal2
+{ 
+position:relative; 
+float:left;  
+}
+
+
+
+#selectionarea { 
+
+position:relative; 
+float:left; 
+width:560px;height:280px;-webkit-border-radius: 0px 99px 0px 20px;-moz-border-radius: 0px 99px 0px 20px;border-radius: 0px 99px 0px 20px;border:5px solid #8544CF;background:rgba(18,121,255,0.9); 
+padding:5px 5px 5px 0px;
+margin-left:10px;
+margin-bottom:10px;
+/*margin-top:10px;*/}
+
+#selectionarea label {
+	color:#FFFFFF;  
+	
+}
+
+#projectdiv, #componentdiv, #activitytypediv, #subcomponentdiv, #activitydiv, #subactivitydiv {
+	padding-left:10px; 
+	
+	
+}
+
+#projectid, #componentid, #activitytypeid, #subcomponentid, #activityid, #subactivityid {
+	width:400px; 
+	/*background-color:#58DB90;
+	color:#FFFFFF;*/
+}

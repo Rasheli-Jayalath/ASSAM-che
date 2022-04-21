@@ -1,0 +1,118 @@
+#table-content	{
+	line-height: 16px;
+	margin: 0 10px 10px 10px;
+	min-height: 300px;
+	}/* MESSAGES --------------------------------------------------------------- */	
+#message-yellow	{
+	margin: 15px 15px 15px 15px;
+	}
+.yellow-left	{
+	background: url(../images/message_yellow.gif) top left no-repeat;
+	color: #e79300;
+	font-family: Tahoma;
+	font-weight: bold;
+	padding: 0 0 0 20px;
+	}
+.yellow-left a	{
+	color: #e79300;
+	font-family: Tahoma;
+	font-weight: normal;
+	text-decoration: underline;
+	height:35px;
+	width:1000px;
+	}
+.yellow-right a	{
+	cursor: pointer;
+	}
+.yellow-right	{
+	height:35px;
+	width:55px;
+	}
+#message-blue0	{
+	margin: 15px 15px 15px 15px;
+	}
+	#message-blue1	{
+	margin: 15px 15px 15px 15px;
+	}
+	#message-blue2	{
+	margin: 15px 15px 15px 15px;
+	}
+	#message-blue3	{
+	margin: 15px 15px 15px 15px;
+	}
+	#message-blue4	{
+	margin: 15px 15px 15px 15px;
+	}
+.blue-left	{
+	background: url(../images/message_blue.gif) top left no-repeat;
+	color: #2e74b2;
+	font-family: Tahoma;
+	font-weight: bold;
+	padding: 0 0 0 20px;
+	height:35px;
+	width:1000px;
+	}
+.blue-left a	{
+	color: #2e74b2;
+	font-family: Tahoma;
+	font-weight: normal;
+	text-decoration: underline;
+	}
+.blue-right a	{
+	cursor: pointer;
+	}
+.blue-right	{
+	height:35px;
+	width:55px;
+	}
+#message-red	{
+	margin: 15px 15px 15px 15px;
+	}
+.red-left	{
+	background: url(../images/message_red.gif) top left no-repeat;
+	color: #ce2700;
+	font-family: Tahoma;
+	font-weight: bold;
+	padding: 0 0 0 20px;
+	height:35px;
+	width:1000px;
+	}
+.red-left a	{
+	color: #ce2700;
+	font-family: Tahoma;
+	font-weight: normal;
+	text-decoration: underline;
+	}
+.red-right a	{
+	cursor: pointer;
+	}
+.red-right	{
+	height:35px;
+	width:55px;
+	}
+#message-green	{
+	margin: 15px 15px 15px 15px;
+	}
+.green-left	{
+	background: url(../images/message_green.gif) top left no-repeat;
+	color: #6da827;
+	font-family: Tahoma;
+	font-weight: bold;
+	line-height: 12px;
+	padding: 0 0 0 20px;
+	height:35px;
+	width:1000px;
+	}
+.green-left a	{
+	color: #6da827;
+	font-family: Tahoma;
+	font-weight: normal;
+	text-decoration: underline;
+		}
+.green-right a	{
+	cursor: pointer;
+	}
+.green-right	{
+	height:35px;
+	width:55px;
+	}

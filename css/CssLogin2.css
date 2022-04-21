@@ -1,0 +1,256 @@
+/* CSS Document */
+@charset "utf-8";
+
+body{
+	/*background:#E0E0E0;*/
+		
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+	margin:0 auto;
+	}
+
+/*+---------------------+
+ +	Member Login Page	+
+ +---------------------*/
+
+#wrapper_MemberLogin{
+	width:340px;
+	/*height:289px;*/
+	margin:19px 19px 9px 19px;
+	}
+
+h1{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:1.6em;
+	font-weight:bold;
+	display:block;
+	letter-spacing:-1px;
+	text-align:center;
+	text-transform:1px 1px 1px #ffffff;
+	margin:0;
+	color:#006;/*#004C08*/
+	}
+h1 span{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#999;
+	}
+
+#LoginBox{
+	background:#ebebeb url(../images/login_img/loginbox_Bg.png) bottom repeat-x;
+	width:auto;
+	min-width:350px;
+	min-height:120px;
+	height:auto;
+	overflow:hidden;
+	border:1px solid #eee;
+	margin:10px auto 14px auto;
+	padding:14px 0 9px 0px;
+	font-weight: 500;
+	border-image: initial;
+	}
+
+#forgetBox{
+	background:#ebebeb url(../images/login_img/loginbox_Bg.png) bottom repeat-x;
+	width:362px;
+	height:109px;
+	border:1px solid #eee;
+	margin:19px auto 19px auto;
+	padding:9px 0 9px 19px;
+	font-weight: 700;
+	border-image: initial;
+	}
+.loginboxContainer{
+	background:url(../images/login_img/bg_login_input.png) repeat-x;
+	width:302px;
+	height:42px;
+	margin:17px 0 0 159px;
+	}
+	
+#useralert{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#CC0000;
+	width:299px;
+	height:19px;
+	text-align:center;
+	margin:0 0 0 19px;
+	}
+#username1{
+	background:url(../images/login_img/username.png) no-repeat;
+	width:189px;
+	height:auto;
+	padding:0 0 0 99px;
+	margin:9px 0 0 9px;
+	float:left;
+	}
+#userpass{
+	background:url(../images/login_img/userpass.png) no-repeat;
+	width:189px;
+	height:auto;
+	padding:0 0 0 99px;
+	margin:9px 0 0 9px;
+	float:left;
+	}
+#usertype{
+	background:url(../images/login_img/usertype.png) no-repeat;
+	font-size:11px;
+	font-weight:normal;
+	width:199px;
+	height:auto;
+	padding:0 0 0 89px;
+	margin:9px 0 0 9px;
+	float:left;
+	}
+	
+.userinbox{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:19px;
+	border:none;
+	outline:none;
+	width:175px;
+	height:19px;
+	}
+	
+#userLogin{
+	width:199px;
+	height:39px;
+	margin:9px 0 0 110px;
+	float:left;
+	}
+
+#forgotPass{
+	color: #666666;
+	cursor:pointer;
+	font-family:'Myriad Pro',Arial,Helvetica,sans-serif;
+	font-size:12px;
+	padding:5px 10px 5px 20px;
+	text-decoration: underline;
+	}
+	
+#forgotPass:hover{
+	color: #FF0000;
+	cursor:pointer;
+	font-family:'Myriad Pro',Arial,Helvetica,sans-serif;
+	font-size:12px;
+	padding:5px 10px 5px 20px;
+    text-decoration: underline;
+	}
+
+#uLogin{
+	background-color: #F4F4F4;
+	border:1px solid  #999999;
+	color: #666666;
+	cursor:pointer;
+	font-family:'Myriad Pro',Arial,Helvetica,sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px 10px 5px 10px;
+	margin-left:10px;
+	float:right;
+	
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+
+#uLogin:hover{
+	background-color: #FFFFFF;
+	border:1px solid  #666666;
+	color: #333333;
+	cursor:pointer;
+	font-family:'Myriad Pro',Arial,Helvetica,sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px 10px 5px 10px;
+	
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+
+.message {
+margin:20px 0 16px 8px;
+border-width: 1px;
+border-style: solid;
+padding: 12px;
+-moz-border-radius: 3px;
+-khtml-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+background-color: lightYellow;
+border-color: #E6DB55;
+}
+
+#login_error{
+background-color: #FFEBE8;
+border-color: #C00;
+margin:20px 0 16px 8px;
+border-width: 1px;
+border-style: solid;
+padding: 12px;
+-moz-border-radius: 3px;
+-khtml-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+}
+
+/*+---------------------+
+ + Admin STyles Classes +
+ +---------------------*/
+.clear{
+	clear:both;
+	}
+	
+.borderRound{
+	border-radius:9px;
+	-moz-border-radius:9px;
+	-webkit-border-radius:9px;
+	}
+.borderShadow{
+	box-shadow: 1px 1px 8px #999;
+	-moz-box-shadow: 1px 1px 8px #999;	
+	-webkit-box-shadow: 1px 1px 8px #999;
+	}
+	#pageContentRight{
+	width:319px;
+	height:39px;
+	float:right;
+	}
+
+.menu1 ul{
+    margin:0;
+	padding:0;
+    float:right; }
+.menu1 ul li{
+    display: inline; }
+.menu1 ul li a{
+	
+	font-weight: bold;
+	font-size: .9em;
+	-moz-box-shadow: -3px 3px 8px #ccc; /* FF3.5+ */;
+	-webkit-box-shadow: -3px 3px 8px #ccc; /* Saf3.0+, Chrome */;
+	box-shadow: -3px 3px 8px #ccc; /* Opera 10.5, IE 9.0 */;
+	color: #666;
+	padding: 5px 12px;
+	text-shadow: #fff 1px 1px 1px; /*--top left rounded corner--*/;
+	-moz-border-radius-bottomright: 3px;
+	-khtml-border-radius-bottomright: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	border-bottom-right-radius: 3px; /*--Bottom left rounded corner--*/;
+	-moz-border-radius-bottomleft: 3px;
+	-khtml-border-radius-bottomleft: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	margin-left: 9px; /*shadow animation*/;
+	-moz-transition: all 0.3s ease-out; /* FF3.7+ */;
+	-o-transition: all 0.3s ease-out; /* Opera 10.5 */;
+	-webkit-transition: all 0.3s ease-out; /* Saf3.2+, Chrome */;
+	background-color: #f5f5f5; /* FF3.6 */;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f5f5f5', EndColorStr='#ffffff')";
+	background-image: -webkit-gradient(linear, 0% 100%, 0% 0%, from(whiteSmoke), to(white));
+	float:left; }  
+.menu1 ul li a:hover{
+	-webkit-box-shadow: -3px 3px 10px #888;}

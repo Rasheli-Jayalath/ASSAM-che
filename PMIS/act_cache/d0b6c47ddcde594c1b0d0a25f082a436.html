@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Project Monitoring and Management Information System (PMIS)</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+<script type="text/javascript" src="scripts/script.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/styleNew.css">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+
+<link rel="stylesheet" type="text/css" media="all" href="datepickercode/jquery-ui.css" />
+  <script type="text/javascript" src="datepickercode/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="datepickercode/jquery-ui.js"></script>
+<script type="text/javascript">
+function GetActivity(){
+	
+	var qString = '';
+	
+	var output_var=document.main_dash.output_id.value;
+	
+	var act_var=document.main_dash.act_id.value;
+	
+	
+	if(document.main_dash.str_obj.value != "" && document.main_dash.str_obj.value != 0)
+	{
+		
+		qString += 'obj=' + escape(document.main_dash.str_obj.value);
+	}
+	if(document.main_dash.outcome_id.value != "" && document.main_dash.outcome_id.value != 0)
+	{
+		
+		qString += '&outcome=' + escape(document.main_dash.outcome_id.value);
+	}
+	if(document.main_dash.output_id.value != "" && document.main_dash.output_id.value != 0)
+	{
+		
+		qString += '&output=' + escape(document.main_dash.output_id.value);
+	}
+	
+	if(output_var!= "" && output_var != 0 &&  act_var!= "" && act_var != 0)
+	{
+		
+		qString += '&activity=' + escape(act_var);
+	}
+				document.location = 'progress_dashboard.php?' + qString;
+}
+function GetNextLevel(value,div_name)
+{
+	
+	 var str=div_name;
+	var div_id=str.substr(7, 8);
+	
+	  div_id=parseInt(div_id)+1;
+	 if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+	
+      document.getElementById("str_obj_div_"+div_id).innerHTML=xmlhttp.responseText;
+
+	 
+    }
+  }
+
+  xmlhttp.open("GET","findnextlevelAct.php?parentgroup="+value+"&div_id="+div_id,true);
+  xmlhttp.send();
+}
+</script>
+</head>
+<body>
+<div style="display: inline-block; height:110px; background-color:#f8f8f8;">
+<div style="width:auto;">
+<a href="./index.php"><img src="images/logo.png"   height="106" title="Home"  align="left" style="border-color:#ccc; border-radius:1px; padding:2px" /></a>
+<div style="width:auto; padding-top:10px">
+<span style="font-family:Arial, Helvetica, sans-serif; font-size:24px; color:#333; font-weight:bold; padding-left:305px" >Project Management Information System</span><br/>
+<span style="font-family:Arial, Helvetica, sans-serif; font-size:24px; color:#333; font-weight:bold; padding-left:360px" >Activity Monitoring Dashboard</span>
+</div>
+</div>
+<table cellpadding="4px" cellspacing="0px" align="center" width="100%" style="border: solid 1px #ccc;" > 
+<tr> 
+<td width="25%" align="left" valign="top" style="border-right: solid 1px #ccc;"><div id="wrapper_MemberLogin" style="margin:10px;">
+  <h1 style="color:#000;">Activity Monitoring Dashboard </h1>
+  <div class="clear"></div>
+  <div id="LoginBox" class="borderRound borderShadow" style="padding:10px; width:300px">
+    <form action="progress_dashboard.php" method="get" name="main_dash" id="main_dash" >
+    <input type="hidden" id="temp_id" name="temp_id" value="1"  />
+      <table border="0px" cellpadding="0px" cellspacing="0px" align="center"  >
+              <tr>
+          <td ><strong>
+            <label> Sub-Project Area: </label>
+          </strong></td>
+          <td><div id="str_obj_div_0">
+            <select name="itemid_0" id="itemid_0" onchange="GetNextLevel(this.value,this.name)">
+             <option value="0">Sub-Project Area</option>
+              		    <option value="000001"   selected="selected" >
+								IDIP2-01-Second Irrigation and Drainage Inprovement Project (IDIP2)								</option>
+							              </select>
+          </div></td>
+        </tr>
+                <tr>
+          <td ><strong>
+            <label> Sub Component: </label>
+          </strong></td>
+          <td><div id="str_obj_div_1">
+            <select name="itemid_1" id="itemid_1" onchange="GetNextLevel(this.value,this.name)">
+             <option value="0">Sub Component</option>
+              		    <option value="000001_000002"  >
+								1-ППЗ/SPA: MAKHTAARAL 1A								</option>
+							  		    <option value="000001_000003"   selected="selected" >
+								2-ППЗ/SPA: MAKHTAARAL 1B								</option>
+							  		    <option value="000001_000004"  >
+								3-ППЗ/SPA: MAKHTAARAL 2								</option>
+							  		    <option value="000001_000005"  >
+								4-ППЗ/SPA: ARYS-TURKESTAN								</option>
+							  		    <option value="000001_000006"  >
+								5-ППЗ/SPA: KYZYLORDA								</option>
+							  		    <option value="000001_000007"  >
+								6-ППЗ/SPA: KYZYLKUM								</option>
+							  		    <option value="000001_000008"  >
+								7-ППЗ/SPA: KAPAL								</option>
+							  		    <option value="000001_000009"  >
+								8-ППЗ/SPA: AKDALA								</option>
+							  		    <option value="000001_000010"  >
+								9-ППЗ/SPA: GMC								</option>
+							  		    <option value="000001_000011"  >
+								10-ППЗ/SPA: PMC								</option>
+							  		    <option value="000001_000012"  >
+								11-ППЗ/SPA: BAC								</option>
+							              </select>
+          </div></td>
+        </tr>
+                
+         <tr >
+          <td style="padding-top:20px" align="center" colspan="2">
+            <input type="submit" value="Generate Report"  id="uLogin2"/>
+            </td>
+            <td></td>
+            </tr>
+      </table>
+     
+    </form>
+    
+  </div>
+</div>
+<table cellpadding="4px" cellspacing="0px" align="center" width="80%" style="border: solid 1px #ccc; margin:10px 10px 10px 30px" > 
+    <tr style="background-color:; border-bottom-color:#FFF">
+<td height="20" style="text-align:left;border-bottom-color:#FFF">
+<img src="images/indicators/green.png" width="25px" title="Completed" style="vertical-align:middle">&nbsp;&nbsp;<span >Completed</span>
+</td>
+</tr>
+<tr style="background-color:;">
+<td height="20" style="text-align:left;border-bottom-color:#FFF">
+<img src="images/indicators/red.png" width="25px" title="Delayed Against Schedule" style="vertical-align:middle">&nbsp;&nbsp;<span >Delayed Against Schedule</span>
+</td>
+
+</tr>
+<tr style="background-color:;">
+<td height="20" style="text-align:left;border-bottom-color:#FFF">
+<img src="images/indicators/yellow.png" width="25px" title="Continued" style="vertical-align:middle">&nbsp;&nbsp;<span style="vertical-align:middle" >Continued</span>
+</td>
+
+</tr>
+<tr style="background-color:;">
+<td height="20" style="text-align:left;border-bottom-color:#FFF">
+<img src="images/indicators/pink.png" width="25px" title="Indicator for Quantity Overuse"  style="vertical-align:middle">&nbsp;&nbsp;<span style="vertical-align:middle" >Indicator for Quantity Overuse</span>
+</td>
+</tr>
+<tr style="background-color:;">
+<td height="20" style="text-align:left;">
+<img src="images/indicators/blue.png" width="25px" title="Not yet Started" style="vertical-align:middle" >&nbsp;&nbsp;<span style="vertical-align:middle" >Not yet Started</span>
+</td>
+
+</tr>
+    </table>
+  <script src="lightbox/js/lightbox.min.js"></script>
+  <link href="lightbox/css/lightbox.css" rel="stylesheet" />      
+</td>
+<td width="75%" align="left" valign="top">
+<script src="highcharts/js/highcharts.js"></script>
+<script src="highcharts/js/modules/exporting.js"></script>
+<script src="highcharts/js/modules/jquery.highchartTable.js"></script>
+
+ <table border="0" cellpadding="0px" cellspacing="0px" align="left" width="100%"  style="padding:0; margin:0;"> 
+<tr> 
+<td align="left" valign="top" width="50%" >
+<script type="text/javascript">
+$(function () {
+        $('#container').highcharts({
+            chart: {
+                type: 'spline'
+            },
+            title: {
+                text: '2-ППЗ/SPA: MAKHTAARAL 1B'
+            },
+            subtitle: {
+                text: 'Progress To-Date '
+            },
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: { // don't display the dummy year
+                     month: '%m-%Y',
+                	 year: '%Y'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: '% Done'
+                },
+                min: 0
+            },
+            tooltip: {
+                formatter: function() {
+                        return '<b>'+ this.series.name +'</b><br/>'+
+                        Highcharts.dateFormat('%d-%m-%Y', this.x) +': '+ this.y +' ';
+                }
+            },
+            legend: {
+            layout: 'vertical',
+            align: 'left',
+            x: 90,
+            verticalAlign: 'top',
+            y: 50,
+            floating: true/*,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'*/
+        },
+            series: [
+		{
+                name: 'Actual Progress: <span style="color:blue">50.35%</span>',
+                
+                data: [
+				[Date.UTC(2019,3,30) , 137791785 ] , [Date.UTC(2019,4,31) , 294174509 ] , [Date.UTC(2019,5,30) , 415070374 ] , [Date.UTC(2019,6,31) , 617605767 ] , [Date.UTC(2019,7,31) , 739737749 ] , [Date.UTC(2019,8,30) , 913740004 ] , [Date.UTC(2019,9,31) , 1151212681 ] , [Date.UTC(2019,10,30) , 2158591879 ] , [Date.UTC(2019,11,31) , 3002874634 ] , [Date.UTC(2020,0,31) , 3061159388 ] , [Date.UTC(2020,1,29) , 3115683835 ] , [Date.UTC(2020,2,31) , 3611188861 ] , [Date.UTC(2020,3,30) , 4090709854 ] , [Date.UTC(2020,4,31) , 4357157039 ] , [Date.UTC(2020,5,30) , 4588999632 ] , [Date.UTC(2020,6,31) , 4871485574 ] , [Date.UTC(2020,7,31) , 5128675922 ] , [Date.UTC(2020,8,30) , 5546978716 ] , [Date.UTC(2020,9,31) , 6370412752 ] , [Date.UTC(2020,10,30) , 7455306602 ] , [Date.UTC(2020,11,31) , 8113705100 ] , [Date.UTC(2021,0,31) , 8348592443 ] , [Date.UTC(2021,1,28) , 8604662933 ] , [Date.UTC(2021,2,31) , 9008346523 ] , [Date.UTC(2021,3,30) , 9410278777 ] , [Date.UTC(2021,4,31) , 9671118426 ] , [Date.UTC(2021,5,30) , 9671118426 ] , [Date.UTC(2021,6,31) , 9671118426 ] , [Date.UTC(2021,7,31) , 9671118426 ] , [Date.UTC(2021,8,30) , 9671118426 ] , [Date.UTC(2021,9,31) , 9671118426 ] , [Date.UTC(2021,10,30) , 9671118426 ] , [Date.UTC(2021,11,31) , 9671118426 ] , [Date.UTC(2022,0,31) , 9671118426 ] , [Date.UTC(2022,1,28) , 9671118426 ] , [Date.UTC(2022,2,31) , 9671118426 ] , [Date.UTC(2022,3,30) , 9671118426 ] , [Date.UTC(2022,4,31) , 9671118426 ] , [Date.UTC(2022,5,30) , 9671118426 ] , [Date.UTC(2022,6,31) , 9671118426 ] , [Date.UTC(2022,7,31) , 9671118426 ] , [Date.UTC(2022,8,30) , 9671118426 ] , [Date.UTC(2022,9,31) , 9671118426 ] , [Date.UTC(2022,10,30) , 9671118426 ] , [Date.UTC(2022,11,31) , 9671118426 ]       
+                ],
+				marker: {
+               
+                 radius : 1
+            }
+            }
+			
+			,{
+                name: 'Planned: <span style="color:blue">100.00%</span>',
+                data: [
+				
+				[Date.UTC(2018,11,31) , 24945508 ] , [Date.UTC(2019,0,31) , 598692305 ] , [Date.UTC(2019,1,28) , 1097602559 ] , [Date.UTC(2019,2,31) , 1621458340 ] , [Date.UTC(2019,3,30) , 2170259629 ] , [Date.UTC(2019,4,31) , 2744006425 ] , [Date.UTC(2019,5,30) , 3242916679 ] , [Date.UTC(2019,6,31) , 3816663476 ] , [Date.UTC(2019,7,31) , 4365464765 ] , [Date.UTC(2019,8,30) , 4889320546 ] , [Date.UTC(2019,9,31) , 5463067343 ] , [Date.UTC(2019,10,30) , 5986923124 ] , [Date.UTC(2019,11,31) , 6535724413 ] , [Date.UTC(2020,0,31) , 7009689159 ] , [Date.UTC(2020,1,29) , 7508599413 ] , [Date.UTC(2020,2,31) , 8032455194 ] , [Date.UTC(2020,3,30) , 8581256483 ] , [Date.UTC(2020,4,31) , 9030275721 ] , [Date.UTC(2020,5,30) , 9579077010 ] , [Date.UTC(2020,6,31) , 10102932791 ] , [Date.UTC(2020,7,31) , 10601843045 ] , [Date.UTC(2020,8,30) , 11150644333 ] , [Date.UTC(2020,9,31) , 11699445622 ] , [Date.UTC(2020,10,30) , 12223301403 ] , [Date.UTC(2020,11,31) , 12697266149 ] , [Date.UTC(2021,0,31) , 13221121930 ] , [Date.UTC(2021,1,28) , 13720032184 ] , [Date.UTC(2021,2,31) , 14293778981 ] , [Date.UTC(2021,3,30) , 14842580270 ] , [Date.UTC(2021,4,31) , 15366436051 ] , [Date.UTC(2021,5,30) , 15915237340 ] , [Date.UTC(2021,6,31) , 16464038629 ] , [Date.UTC(2021,7,31) , 17012839918 ] , [Date.UTC(2021,8,30) , 17561641207 ] , [Date.UTC(2021,9,31) , 18085496988 ] , [Date.UTC(2021,10,30) , 18634298277 ] , [Date.UTC(2021,11,31) , 19208045073 ] , [Date.UTC(2022,0,31) , 19208045073 ] , [Date.UTC(2022,1,28) , 19208045073 ] , [Date.UTC(2022,2,31) , 19208045073 ] , [Date.UTC(2022,3,30) , 19208045073 ] , [Date.UTC(2022,4,31) , 19208045073 ] , [Date.UTC(2022,5,30) , 19208045073 ] , [Date.UTC(2022,6,31) , 19208045073 ] , [Date.UTC(2022,7,31) , 19208045073 ] , [Date.UTC(2022,8,30) , 19208045073 ] , [Date.UTC(2022,9,31) , 19208045073 ] , [Date.UTC(2022,10,30) , 19208045073 ] , [Date.UTC(2022,11,31) , 19208045073 ]                  
+                ]
+            ,
+				marker: {
+               
+                 radius : 1
+            }}
+			
+				,
+			{ name: 'Projected Completion Date with Current Rate: <span style="color:blue">28-Jan-2025</span>',
+			  
+			  marker: {
+				   
+                    enabled: false,
+					radius : -1
+                }},
+				{ name: 'Planned Completion Date: <span style="color:blue">29-Dec-2022</span>',
+			  
+			  marker: {
+				   
+                    enabled: false,
+					radius : -1
+                }}
+			]
+        });
+    });
+    
+
+		</script>
+        <table width="100%"  align="left" border="0" style="margin:0">
+   
+   <tr>
+     <td height="99"  style="line-height:18px; text-align:justify; vertical-align:top">
+     <div id="container" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+     </td>
+     
+   </tr>
+   
+</table></td>
+</tr>
+</table>
+<div style="clear:both" ></div><div style="clear:both" ></div><div style="clear:both" ></div><div style="clear:both" ></div>
+<table  cellpadding="0px" cellspacing="0px"   width="100%" align="center"  id="tblList" style="border-left:1px #000000 solid;">
+<tr bgcolor="000066" style="color:#FFF">
+<td colspan="17" align="left" style="font-size:14px"><strong>2-ППЗ/SPA: MAKHTAARAL 1B</strong></td>
+</tr>
+<tr>
+  <th width="17" height="37" rowspan="2">#</th>
+  <th width="58" rowspan="2">Code</th>
+  <th width="139" rowspan="2">Activity</th>
+  <th width="60" rowspan="2">Weight</th>
+  <th width="60" rowspan="2">Indicator</th>
+  <th colspan="2">Planned</th>
+  <th width="53" rowspan="2">Upto Date</th>
+  <th width="57" rowspan="2">Planned Days</th>
+  <th width="53" rowspan="2">Days Elapsed</th>
+  <th width="39" rowspan="2">Total Work</th>
+  <th width="57" rowspan="2">Planned Work</th>
+  <th width="47" rowspan="2">Actual Work</th>
+  <th width="71" rowspan="2" title="Difference">&#916;</th>
+  <th width="66" rowspan="2"> Required  Rate</th>
+  <th width="75" rowspan="2">Projected Date</th>
+  <th width="63" rowspan="2">Progress</th>
+  <!--  <th width="110">Contract Amount</th> -->  
+</tr>
+<tr>
+  <th width="85">Start</th>
+  <th width="91">Finish</th>
+  </tr>
+
+  <tr style="background-color:#FFFFFF; ">
+<td height="20" style="text-align:center;">1</td>
+<td style="text-align:left;"><span style="text-align:center;">2</span></td>
+<td style="text-align:center;"><span style="text-align:left;">ППЗ/SPA: MAKHTAARAL 1B</span></td>
+<td style="text-align:center;">21.8148</td>
+<td style="text-align:center;"><img src="images/indicators/red.png" width="25px" title="Delayed Against Schedule"></td>
+<td style="text-align:right;">29-12-2018</td>
+<td style="text-align:right;">29-12-2022</td>
+<td style="text-align:right;">31-12-2022</td>
+<td style="text-align:right;">770</td>
+<td style="text-align:right;">770</td>
+<td style="text-align:right;">19,208,045,496</td>
+<td style="text-align:right;">19,208,045,073</td>
+<td style="text-align:right;">9,671,118,426</td>
+<td style="text-align:right;">9,536,926,648</td>
+<td style="text-align:right;">0</td>
+<td style="text-align:right;">28-01-2025</td>
+<td style="text-align:right;">50.35 %</td>
+</tr>
+
+            
+            
+</table>
+</td>
+</tr>
+</table>
+ 
+<table width="100%" height="28" align="center" cellpadding="0" cellspacing="0" style="margin:0px; padding:0px"  >
+<tr><td >&copy; SJ-SMEC-EGC</td>
+<td align="right">Designed and Developed by <a href="http://www.egcpakistan.com?id=it" target="_blank" title="PMIS Section-  SJ-SMEC-EGC" >PMIS Development Section</a></td></tr></table>
+</div>
+</body>
+</html>
